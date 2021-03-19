@@ -1,3 +1,6 @@
+//Implement all functionalities attached with linked lists.
+
+
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -85,7 +88,7 @@ void displayList(struct node *head) {
 
 void insertAtPosition(struct node * head) {
     int po,ele;
-    printf("Enter Element and Position: ");
+    printf("Enter Position and Element: ");
     scanf("%d%d",&po,&ele);
     if(head == NULL) {
         printf("Error: List is empty.");
@@ -96,6 +99,7 @@ void insertAtPosition(struct node * head) {
         tmp = tmp->nxt;
         if(tmp->nxt == NULL) {
             f=1;
+            break;
         }
         po--;
     }
@@ -252,7 +256,7 @@ int main() {
             searchEle(head);
             break;
         case 9:
-            length(head);
+            printf("Length = %d\n",length(head));
             break;
         case 11:
             displayList(head);
@@ -266,3 +270,5 @@ int main() {
 
 
 }
+
+//Vivek Tej
